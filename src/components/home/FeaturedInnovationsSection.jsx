@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import incubatorVideo from "../../assets/projects/incubator.mp4";
 
 export default function FeaturedInnovationsSection() {
@@ -31,12 +30,12 @@ export default function FeaturedInnovationsSection() {
               <p className="text-gray leading-relaxed mb-4">
                 A youth-led solution supporting innovation and sustainable development in communities.
               </p>
-              <Link
-                to="/#smart-incubator"
+              <a
+                href="#smart-incubator"
                 className="text-primary font-semibold text-sm hover:underline"
               >
                 Watch video above ↑
-              </Link>
+              </a>
             </div>
           </article>
         </div>

@@ -31,12 +31,12 @@ export default function Hero() {
               >
                 Get involved
               </Link>
-              <Link
-                to="/#smart-incubator"
-                className="px-6 py-3 border-2 border-white/80 text-white font-semibold rounded-lg hover:bg-white/10 transition"
+              <a
+                href="#smart-incubator"
+                className="px-6 py-3 border-2 border-white/80 text-white font-semibold rounded-lg hover:bg-white/10 transition inline-block"
               >
                 Explore projects
-              </Link>
+              </a>
             </div>
           </div>
 

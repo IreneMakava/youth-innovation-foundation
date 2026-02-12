@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
@@ -8,6 +10,17 @@ import ProgramsOverviewSection from "../components/home/ProgramsOverviewSection"
 import CallToActionBanner from "../components/home/CallToActionBanner";
 
 export default function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#smart-incubator") {
+      const el = document.getElementById("smart-incubator");
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
+      }
+    }
+  }, [location.pathname, location.hash]);
+
   return (
     <>
       <Navbar />

@@ -10,9 +10,9 @@ const partnerImages = [client1, client2, client4, client5, client6, client8, par
 
 export default function ImpactStatsSection() {
   return (
-    <section className="py-16 sm:py-20 bg-black">
+    <section className="py-16 sm:py-20 bg-light-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-black text-center mb-12">
           Our Partners
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center">
