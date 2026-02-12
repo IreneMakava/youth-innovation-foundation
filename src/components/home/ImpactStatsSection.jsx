@@ -19,7 +19,7 @@ export default function ImpactStatsSection() {
           {partnerImages.map((src, i) => (
             <div
               key={i}
-              className="flex items-center justify-center grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300"
+              className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300"
             >
               <img
                 src={src}
