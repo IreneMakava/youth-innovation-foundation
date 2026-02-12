@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import logoBlue from "../assets/logo1.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -32,9 +33,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 shrink-0">
           <img
-            src={logo}
+            src={isScrolled ? logo : logoBlue}
             alt="Youth Innovation Foundation"
-            className="h-20 w-[320px] object-contain object-left [mix-blend-mode:multiply] dark:[mix-blend-mode:screen]"
+            className={`h-12 w-[180px] sm:h-16 sm:w-[240px] lg:h-20 lg:w-[320px] object-contain object-left ${isScrolled ? "[mix-blend-mode:multiply] dark:[mix-blend-mode:screen]" : ""}`}
           />
         </Link>
 
