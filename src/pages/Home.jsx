@@ -13,8 +13,10 @@ export default function Home() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash === "#smart-incubator") {
-      const el = document.getElementById("smart-incubator");
+    const hash = location.hash;
+    if (hash === "#smart-incubator" || hash === "#our-events") {
+      const id = hash.slice(1);
+      const el = document.getElementById(id);
       if (el) {
         setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
       }

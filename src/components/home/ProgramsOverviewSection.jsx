@@ -3,7 +3,7 @@ import { events } from "../../data/events";
 
 export default function ProgramsOverviewSection() {
   return (
-    <section className="py-16 sm:py-20 bg-light-gray">
+    <section id="our-events" className="py-16 sm:py-20 bg-light-gray scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <h2 className="text-3xl sm:text-4xl font-bold text-black text-center mb-4">
           Our Events
@@ -42,6 +42,11 @@ export default function ProgramsOverviewSection() {
             </Link>
           ))}
         </div>
+        <p className="text-center mt-8">
+          <Link to="/events" className="text-primary font-semibold hover:underline">
+            View all events →
+          </Link>
+        </p>
       </div>
     </section>
   );

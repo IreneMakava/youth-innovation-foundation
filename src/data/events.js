@@ -1,6 +1,8 @@
 import e2 from "../assets/Events/Events1/E2.jpg";
 import e3 from "../assets/Events/Events1/E3.jpg";
 import e4 from "../assets/Events/Events1/E4.jpg";
+import ev2e1 from "../assets/Events/Events2/E1.jpg";
+import ev2e2 from "../assets/Events/Events2/E2.jpg";
 
 export const events = [
   {
@@ -19,8 +21,8 @@ export const events = [
     slug: "ceo-of-the-year-2025",
     date: "2025",
     title: "Non-Profit Organization CEO of the Year 2025 – CPA Deborah Wami",
-    coverImage: null,
-    images: [],
+    coverImage: ev2e1,
+    images: [ev2e1, ev2e2],
     description: [
       "Seris Foundation",
       "We congratulate you on receiving this prestigious award.",
