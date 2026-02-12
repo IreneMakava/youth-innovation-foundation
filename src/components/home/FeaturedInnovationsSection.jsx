@@ -11,7 +11,7 @@ export default function FeaturedInnovationsSection() {
         <p className="text-gray text-center max-w-2xl mx-auto mb-12">
           See how young innovators are using science and technology to solve real community challenges.
         </p>
-        <div className="max-w-3xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <article className="bg-light-gray rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
             <div className="aspect-video bg-black">
               <video
