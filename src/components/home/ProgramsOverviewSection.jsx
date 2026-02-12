@@ -1,9 +1,5 @@
-import e2 from "../../assets/Events/Events1/E2.jpg";
-import e3 from "../../assets/Events/Events1/E3.jpg";
-import e4 from "../../assets/Events/Events1/E4.jpg";
 import { Link } from "react-router-dom";
-
-const event1Images = [e2, e3, e4];
+import { events } from "../../data/events";
 
 export default function ProgramsOverviewSection() {
   return (
@@ -16,42 +12,36 @@ export default function ProgramsOverviewSection() {
           Highlights from our community and partnership activities.
         </p>
 
-        <article className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-0">
-            {event1Images.map((src, i) => (
-              <div key={i} className="aspect-[4/3] bg-gray-100">
-                <img
-                  src={src}
-                  alt={`Seris Foundation donation event ${i + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="p-6 sm:p-8">
-            <p className="text-sm text-primary font-semibold mb-2">1st December 2025</p>
-            <h3 className="text-xl sm:text-2xl font-bold text-black mb-4 leading-snug">
-              Seris Foundation Donates Medical Equipment to the Mother and Child Ward at Mnazi Mmoja Hospital, Dar es Salaam
-            </h3>
-            <div className="text-gray leading-relaxed space-y-4">
-              <p>
-                Seris Foundation donated medical equipment to the Mother and Child Ward at Mnazi Mmoja Hospital in Dar es Salaam on 1st December 2025, as part of its support to the Government's efforts to improve healthcare services in the country.
-              </p>
-              <p>
-                The donation was carried out through a partnership between Seris Foundation and Lions Club International, with both organizations joining efforts to improve the service delivery environment for mothers and children.
-              </p>
-              <p>
-                Seris Foundation, which focuses on empowering youth in the fields of science and technology, continues to establish itself as an important stakeholder in community development through strategic and impactful projects. Through this support, the Foundation aims to enhance the well-being of mothers and children while also supporting national efforts to strengthen the healthcare sector.
-              </p>
-            </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {events.map((ev) => (
             <Link
-              to="/events"
-              className="inline-block mt-6 text-primary font-semibold text-sm hover:underline"
+              key={ev.slug}
+              to={`/events/${ev.slug}`}
+              className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg hover:border-primary/20 transition group"
             >
-              View all events →
+              <div className="aspect-video bg-gray-100 flex items-center justify-center">
+                {ev.coverImage ? (
+                  <img
+                    src={ev.coverImage}
+                    alt=""
+                    className="w-full h-full object-cover group-hover:opacity-95 transition"
+                  />
+                ) : (
+                  <span className="text-gray-400 text-sm font-medium">Event</span>
+                )}
+              </div>
+              <div className="p-5">
+                <p className="text-xs text-primary font-semibold mb-1">{ev.date}</p>
+                <h3 className="text-lg font-bold text-black group-hover:text-primary transition line-clamp-3">
+                  {ev.title}
+                </h3>
+                <span className="inline-block mt-3 text-primary font-semibold text-sm">
+                  See more →
+                </span>
+              </div>
             </Link>
-          </div>
-        </article>
+          ))}
+        </div>
       </div>
     </section>
   );

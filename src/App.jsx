@@ -9,6 +9,7 @@ import Programs from "./pages/Programs";
 import Innovations from "./pages/Innovations";
 import GetInvolved from "./pages/GetInvolved";
 import Events from "./pages/Events";
+import EventDetail from "./pages/EventDetail";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/innovations" element={<Innovations />} />
         <Route path="/get-involved" element={<GetInvolved />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/events/:slug" element={<EventDetail />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
