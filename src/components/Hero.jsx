@@ -4,17 +4,17 @@ import heroImage from "../assets/hero.png";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-start sm:items-center overflow-hidden bg-gradient-to-br from-primary via-blue-700 to-blue-900">
-      {/* Hero image: contain on small, cover full section on large */}
+      {/* Hero image: cover whole section on all screen sizes */}
       <div
-        className="absolute inset-0 bg-no-repeat opacity-90 bg-contain bg-right lg:bg-cover lg:bg-center"
+        className="absolute inset-0 bg-no-repeat bg-cover bg-center opacity-90"
         style={{ backgroundImage: `url(${heroImage})` }}
         aria-hidden
       />
-      {/* Faded overlay where the text sits — left side darker for readability on large screens */}
+      {/* Faded overlay where the text sits — keeps text readable on all screens */}
       <div
-        className="absolute inset-0 pointer-events-none hidden lg:block"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          background: "linear-gradient(to right, rgba(37, 99, 235, 0.92) 0%, rgba(30, 64, 175, 0.5) 35%, transparent 65%)",
+          background: "linear-gradient(to right, rgba(37, 99, 235, 0.92) 0%, rgba(30, 64, 175, 0.5) 40%, transparent 70%)",
         }}
         aria-hidden
       />
