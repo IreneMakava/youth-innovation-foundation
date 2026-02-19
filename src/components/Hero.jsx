@@ -15,7 +15,7 @@ export default function Hero() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full pt-[7.25rem] pb-6 sm:pt-10 sm:pb-10 lg:py-16">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Left: copy */}
           <div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
@@ -40,25 +40,22 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: hero image as background (contain, centered) + bulb — extra padding so circle isn't clipped */}
-          <div className="flex justify-center lg:justify-end items-end mt-6 lg:mt-0 min-h-[280px] sm:min-h-[360px] lg:min-h-[420px] pt-14 pr-14 lg:pt-16 lg:pr-16">
+          {/* Right: woman + bulb — compact on small screens, full on lg */}
+          <div className="flex justify-center lg:justify-end items-end lg:items-end mt-4 sm:mt-6 lg:mt-0">
             <div
-              className="relative w-full max-w-xl lg:max-w-2xl h-full min-h-[280px] sm:min-h-[360px] lg:min-h-[420px] bg-no-repeat bg-center"
-              style={{
-                backgroundImage: `url(${heroImage})`,
-                backgroundSize: "contain",
-              }}
+              className="relative w-[200px] h-[160px] sm:w-[260px] sm:h-[200px] md:w-[320px] md:h-[240px] lg:w-full lg:max-w-xl lg:min-h-[380px] xl:min-h-[420px] bg-no-repeat bg-center bg-contain"
+              style={{ backgroundImage: `url(${heroImage})` }}
             >
-              {/* White circle for bulb — positioned so it stays inside and isn't cropped */}
-              <div className="absolute right-0 top-0 w-44 h-44 sm:w-52 sm:h-52 bg-white rounded-full shadow-xl flex items-center justify-center p-4">
+              {/* Bulb: smaller on mobile, full size on lg */}
+              <div className="absolute right-0 top-0 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-44 lg:h-44 xl:w-52 xl:h-52 bg-white rounded-full shadow-xl flex items-center justify-center p-1.5 sm:p-2 lg:p-4">
                 <img
                   src={bulbImage}
                   alt="Innovation bulb"
                   className="w-full h-full object-contain"
                 />
               </div>
-              {/* Soft blue glow behind */}
-              <div className="absolute right-6 bottom-0 w-64 h-64 bg-primary/40 rounded-full blur-3xl" />
+              {/* Soft glow on desktop */}
+              <div className="absolute right-6 bottom-0 w-64 h-64 bg-primary/40 rounded-full blur-3xl hidden lg:block" />
             </div>
           </div>
         </div>
