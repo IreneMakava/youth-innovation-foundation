@@ -9,6 +9,7 @@ const footerLinks = [
   { label: "Get Involved", href: "/get-involved" },
   { label: "Events", href: "/events" },
   { label: "Contact", href: "/contact" },
+  { label: "Staff mail", href: "#", isMailto: false },
 ];
 
 const socials = [
@@ -37,11 +38,17 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {footerLinks.map(({ label, href }) => (
-                <li key={href}>
-                  <Link to={href} className="text-sm hover:text-white transition">
-                    {label}
-                  </Link>
+              {footerLinks.map(({ label, href, isMailto }) => (
+                <li key={label + href}>
+                  {isMailto ? (
+                    <a href={href} className="text-sm hover:text-white transition">
+                      {label}
+                    </a>
+                  ) : (
+                    <Link to={href} className="text-sm hover:text-white transition">
+                      {label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

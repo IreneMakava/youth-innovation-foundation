@@ -13,7 +13,7 @@ export default function ProgramsOverviewSection() {
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {events.map((ev) => (
+          {events.slice(0, 3).map((ev) => (
             <Link
               key={ev.slug}
               to={`/events/${ev.slug}`}
