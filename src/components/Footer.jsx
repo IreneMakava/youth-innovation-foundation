@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logoDark from "../assets/logo1.png";
 
 const footerLinks = [
   { label: "Home", href: "/" },
@@ -27,9 +27,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <img
-              src={logo}
+              src={logoDark}
               alt="Youth Innovation Foundation"
-              className="h-16 w-[280px] object-contain object-left mb-4 brightness-0 invert"
+              className="h-20 w-[320px] object-contain object-left mb-4"
             />
             <p className="text-sm text-gray-400 max-w-xs">
               Science and Technology Solutions for Community Development.

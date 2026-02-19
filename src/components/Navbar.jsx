@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
-import logoBlue from "../assets/logo1.png";
+import logoDark from "../assets/logo1.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -15,8 +15,11 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const isWhiteBg = location.pathname !== "/" || isScrolled;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 40);
@@ -27,15 +30,15 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-3" : "bg-transparent py-5"
+        isWhiteBg ? "bg-white shadow-md py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 shrink-0">
           <img
-            src={isScrolled ? logo : logoBlue}
+            src={isWhiteBg ? logo : logoDark}
             alt="Youth Innovation Foundation"
-            className={`h-12 w-[180px] sm:h-16 sm:w-[240px] lg:h-20 lg:w-[320px] object-contain object-left ${isScrolled ? "[mix-blend-mode:multiply] dark:[mix-blend-mode:screen]" : ""}`}
+            className={`h-14 w-[200px] sm:h-20 sm:w-[280px] lg:h-24 lg:w-[380px] object-contain object-left ${isWhiteBg ? "[mix-blend-mode:multiply] dark:[mix-blend-mode:screen]" : ""}`}
           />
         </Link>
 
@@ -45,7 +48,7 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 to={href}
-                className={`transition hover:text-primary ${isScrolled ? "text-gray" : "text-white/90 hover:text-white"}`}
+                className={`transition hover:text-primary ${isWhiteBg ? "text-gray" : "text-white/90 hover:text-white"}`}
               >
                 {label}
               </Link>
@@ -56,13 +59,13 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <Link
             to="/login"
-            className={`text-sm font-semibold transition ${isScrolled ? "text-gray hover:text-primary" : "text-white/90 hover:text-white"}`}
+            className={`text-sm font-semibold transition ${isWhiteBg ? "text-gray hover:text-primary" : "text-white/90 hover:text-white"}`}
           >
             Login
           </Link>
           <Link
             to="/register"
-            className={`text-sm font-semibold transition ${isScrolled ? "text-gray hover:text-primary" : "text-white/90 hover:text-white"}`}
+            className={`text-sm font-semibold transition ${isWhiteBg ? "text-gray hover:text-primary" : "text-white/90 hover:text-white"}`}
           >
             Register
           </Link>
