@@ -3,7 +3,7 @@ import heroImage from "../assets/hero.png";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-start sm:items-center overflow-hidden bg-gradient-to-br from-primary via-blue-700 to-blue-900">
+    <section className="relative min-h-screen flex items-start sm:items-center overflow-x-hidden bg-gradient-to-br from-primary via-blue-700 to-blue-900">
       {/* Hero image: cover whole section on all screen sizes */}
       <div
         className="absolute inset-0 bg-no-repeat bg-cover bg-center opacity-90"
@@ -27,9 +27,9 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full pt-[7.25rem] pb-6 sm:pt-10 sm:pb-10 lg:py-16">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full pt-[8rem] pb-1 sm:pt-10 sm:pb-10 lg:py-16">
         <div className="max-w-2xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-snug">
             Empowering youth innovators.
           </h1>
           <p className="mt-3 sm:mt-5 text-base sm:text-lg md:text-xl text-blue-100">

@@ -21,13 +21,13 @@ export default function Navbar() {
       <div className="border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 sm:py-2 flex items-center justify-between gap-2 sm:gap-4">
           <Link to="/" className="shrink-0">
-            <img src={logo} alt="Youth Innovation Foundation" className="h-10 w-[180px] sm:h-16 sm:w-[360px] lg:h-20 lg:w-[420px] object-contain object-left [mix-blend-mode:multiply]" />
+            <img src={logo} alt="Youth Innovation Foundation" className="h-12 w-[260px] sm:h-16 sm:w-[360px] lg:h-20 lg:w-[420px] object-contain object-left [mix-blend-mode:multiply]" />
           </Link>
           <div className="flex-1 text-center min-w-0 hidden sm:block">
             <p className="text-lg sm:text-xl font-bold text-black leading-tight">Youth Innovation Foundation</p>
             <p className="text-xs text-gray mt-0.5">Science and Technology Solutions for Community Development</p>
           </div>
-          <div className="w-[180px] sm:w-[360px] lg:w-[420px] shrink-0 hidden sm:block" aria-hidden />
+          <div className="w-[260px] sm:w-[360px] lg:w-[420px] shrink-0 hidden lg:block" aria-hidden />
         </div>
         <div className="h-0.5 bg-accent w-full" role="presentation" />
       </div>
