@@ -19,13 +19,13 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       {/* Top strip: logo | centered title + tagline | spacer (reference-style, compact) */}
       <div className="border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 py-0 flex items-center gap-2 sm:gap-2">
-          <Link to="/" className="shrink-0 w-36 sm:w-[480px] lg:w-[600px] flex items-center" aria-label="Youth Innovation Foundation home">
-            <img src={logo} alt="" className="h-24 sm:h-24 lg:h-32 w-full max-w-[200px] sm:max-w-[480px] lg:max-w-[600px] object-contain object-left [mix-blend-mode:multiply]" />
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 py-0 flex items-center gap-3 sm:gap-2">
+          <Link to="/" className="shrink-0 w-28 sm:w-[480px] lg:w-[600px] flex items-center overflow-hidden" aria-label="Youth Innovation Foundation home">
+            <img src={logo} alt="" className="h-20 sm:h-24 lg:h-32 w-full max-w-[112px] sm:max-w-[480px] lg:max-w-[600px] object-contain object-left [mix-blend-mode:multiply]" />
           </Link>
-          <div className="flex-1 min-w-0 flex flex-col items-end sm:items-center justify-center text-right sm:text-center overflow-visible flex py-1">
-            <p className="text-sm sm:text-xl lg:text-2xl font-bold text-black leading-tight whitespace-nowrap">Youth Innovation Foundation</p>
-            <p className="text-[11px] sm:text-base text-gray mt-px leading-tight whitespace-nowrap">Science and Technology Solutions for Community Development</p>
+          <div className="flex-1 min-w-0 flex flex-col items-end sm:items-center justify-center text-right sm:text-center overflow-hidden flex py-1 pl-0">
+            <p className="text-xs sm:text-xl lg:text-2xl font-bold text-black leading-tight break-words sm:whitespace-nowrap">Youth Innovation Foundation</p>
+            <p className="text-[10px] sm:text-base text-gray mt-px leading-tight break-words sm:whitespace-nowrap">Science and Technology Solutions<br className="sm:hidden" /> for Community Development</p>
           </div>
           <div className="hidden sm:block w-[340px] sm:w-[480px] lg:w-[600px] shrink-0" aria-hidden />
         </div>
