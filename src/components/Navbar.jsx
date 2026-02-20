@@ -7,8 +7,8 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "Programs", href: "/programs" },
   { label: "Innovations", href: "/innovations" },
-  { label: "Get Involved", href: "/get-involved" },
   { label: "Events", href: "/#our-events" },
+  { label: "Testimonies", href: "/#testimonies" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -17,24 +17,24 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
-      {/* Top strip: logo + title + tagline */}
+      {/* Top strip: logo | centered title + tagline | spacer (reference-style, compact) */}
       <div className="border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 sm:py-2 flex items-center justify-between gap-2 sm:gap-4">
-          <Link to="/" className="shrink-0">
-            <img src={logo} alt="Youth Innovation Foundation" className="h-12 w-[260px] sm:h-16 sm:w-[360px] lg:h-20 lg:w-[420px] object-contain object-left [mix-blend-mode:multiply]" />
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 py-0 flex items-center gap-1 sm:gap-2">
+          <Link to="/" className="shrink-0 w-[340px] sm:w-[480px] lg:w-[600px] flex items-center" aria-label="Youth Innovation Foundation home">
+            <img src={logo} alt="" className="h-16 sm:h-24 lg:h-32 w-full max-w-[340px] sm:max-w-[480px] lg:max-w-[600px] object-contain object-left [mix-blend-mode:multiply]" />
           </Link>
-          <div className="flex-1 text-center min-w-0 hidden sm:block">
-            <p className="text-lg sm:text-xl font-bold text-black leading-tight">Youth Innovation Foundation</p>
-            <p className="text-xs text-gray mt-0.5">Science and Technology Solutions for Community Development</p>
+          <div className="flex-1 min-w-0 flex flex-col items-center justify-center text-center overflow-visible hidden sm:flex">
+            <p className="text-lg sm:text-xl lg:text-2xl font-bold text-black leading-tight whitespace-nowrap">Youth Innovation Foundation</p>
+            <p className="text-sm sm:text-base text-gray mt-px leading-tight whitespace-nowrap">Science and Technology Solutions for Community Development</p>
           </div>
-          <div className="w-[260px] sm:w-[360px] lg:w-[420px] shrink-0 hidden lg:block" aria-hidden />
+          <div className="hidden sm:block w-[340px] sm:w-[480px] lg:w-[600px] shrink-0" aria-hidden />
         </div>
-        <div className="h-0.5 bg-accent w-full" role="presentation" />
+        <div className="h-px bg-accent w-full" role="presentation" />
       </div>
 
       {/* Nav bar: solid blue, white links */}
       <nav className="bg-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between py-1.5 sm:py-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between py-0">
           <ul className="hidden lg:flex items-center gap-5 xl:gap-8 text-sm font-semibold text-white">
             {navLinks.map(({ label, href }) => (
               <li key={href}>
@@ -44,8 +44,7 @@ export default function Navbar() {
           </ul>
           <div className="hidden lg:flex items-center gap-3 ml-auto">
             <Link to="/login" className="text-sm font-semibold text-white hover:text-white/90 transition">Login</Link>
-            <Link to="/register" className="text-sm font-semibold text-white hover:text-white/90 transition">Register</Link>
-            <Link to="/get-involved" className="px-4 py-2 bg-accent text-white text-sm font-semibold rounded hover:bg-red-700 transition">Apply Now</Link>
+            <Link to="/register" className="px-4 py-2 bg-accent text-white text-sm font-semibold rounded hover:bg-red-700 transition">Apply Now</Link>
           </div>
           <button type="button" className="lg:hidden p-2 text-white" onClick={() => setMobileOpen((o) => !o)} aria-label="Menu">
             {mobileOpen ? <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg> : <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>}
@@ -60,8 +59,7 @@ export default function Navbar() {
               <li key={href}><Link to={href} className="block py-2 text-gray font-medium hover:text-primary" onClick={() => setMobileOpen(false)}>{label}</Link></li>
             ))}
             <li><Link to="/login" className="block py-2 text-gray font-medium hover:text-primary" onClick={() => setMobileOpen(false)}>Login</Link></li>
-            <li><Link to="/register" className="block py-2 text-gray font-medium hover:text-primary" onClick={() => setMobileOpen(false)}>Register</Link></li>
-            <li className="pt-2"><Link to="/get-involved" className="block w-full text-center py-3 bg-accent text-white font-semibold rounded-lg" onClick={() => setMobileOpen(false)}>Apply Now</Link></li>
+            <li className="pt-2"><Link to="/register" className="block w-full text-center py-3 bg-accent text-white font-semibold rounded-lg" onClick={() => setMobileOpen(false)}>Apply Now</Link></li>
           </ul>
         </div>
       )}

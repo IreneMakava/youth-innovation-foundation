@@ -12,10 +12,12 @@ import Events from "./pages/Events";
 import EventDetail from "./pages/EventDetail";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
+import ChatBot from "./components/ChatBot";
 
 function App() {
   return (
     <BrowserRouter>
+      <ChatBot />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

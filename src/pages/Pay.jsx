@@ -52,7 +52,7 @@ export default function Pay() {
     return (
       <>
         <Navbar />
-        <main className="min-h-screen pt-28 pb-16 bg-light-gray flex items-center justify-center">
+        <main className="min-h-screen pt-36 sm:pt-40 pb-16 bg-light-gray flex items-center justify-center">
           <p className="text-gray">Redirecting...</p>
         </main>
         <Footer />
@@ -63,9 +63,9 @@ export default function Pay() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-28 pb-16 bg-light-gray">
-        <div className="max-w-lg mx-auto px-4">
-          <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100">
+      <main className="min-h-screen pt-36 sm:pt-40 pb-16 bg-light-gray">
+        <div className="max-w-lg mx-auto px-4 sm:px-6">
+          <div className="bg-white rounded-xl shadow-md p-8 sm:p-10 border border-gray-100">
             <h1 className="text-2xl font-bold text-black mb-2">Complete your membership</h1>
             <p className="text-gray text-sm mb-6">
               Pay once to receive your Youth Innovation Foundation membership ID. You can use it for events and programs.

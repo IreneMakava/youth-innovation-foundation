@@ -27,9 +27,9 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full pt-[8rem] pb-1 sm:pt-10 sm:pb-10 lg:py-16">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full pt-[9rem] pb-1 sm:pt-20 sm:pb-10 lg:pt-28 lg:pb-16">
         <div className="max-w-2xl">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-snug">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-snug">
             Empowering youth innovators.
           </h1>
           <p className="mt-3 sm:mt-5 text-base sm:text-lg md:text-xl text-blue-100">

@@ -8,7 +8,7 @@ export default function ProgramsOverviewSection() {
         <h2 className="text-3xl sm:text-4xl font-bold text-black text-center mb-4">
           Our Events
         </h2>
-        <p className="text-gray text-center max-w-2xl mx-auto mb-12">
+        <p className="text-gray text-center max-w-2xl mx-auto mb-10">
           Highlights from our community and partnership activities.
         </p>
 
@@ -43,8 +43,9 @@ export default function ProgramsOverviewSection() {
           ))}
         </div>
         <p className="text-center mt-8">
-          <Link to="/events" className="text-primary font-semibold hover:underline">
-            View all events →
+          <Link to="/events" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+            View our events
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </Link>
         </p>
       </div>

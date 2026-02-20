@@ -36,10 +36,10 @@ export default function Login() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-28 pb-16 bg-light-gray">
-        <div className="max-w-md mx-auto px-4">
-          <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100">
-            <h1 className="text-2xl font-bold text-black mb-2">Log in</h1>
+      <main className="min-h-screen pt-36 sm:pt-40 pb-16 bg-light-gray">
+        <div className="max-w-2xl mx-auto px-4">
+          <div className="bg-white rounded-xl shadow-md p-8 sm:p-10 border border-gray-100">
+            <h1 className="text-2xl font-bold text-black mb-2 scroll-mt-28">Log in</h1>
             <p className="text-gray text-sm mb-6">
               Log in to your account. After payment you can access your membership ID here.
             </p>
@@ -49,33 +49,35 @@ export default function Login() {
                   {error}
                 </div>
               )}
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-black mb-1">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary"
-                  placeholder="you@example.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="password" className="block text-sm font-medium text-black mb-1">
-                  Password
-                </label>
-                <input
-                  id="password"
-                  type="password"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary"
-                  placeholder="••••••••"
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-black mb-1">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary"
+                    placeholder="you@example.com"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="password" className="block text-sm font-medium text-black mb-1">
+                    Password
+                  </label>
+                  <input
+                    id="password"
+                    type="password"
+                    required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary"
+                    placeholder="••••••••"
+                  />
+                </div>
               </div>
               <button
                 type="submit"

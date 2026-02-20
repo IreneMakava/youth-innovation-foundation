@@ -49,14 +49,14 @@ export const events = [
   {
     slug: "seris-foundation-annual-engineers-day-aed25",
     date: "25–26 September 2025",
-    title: "Seris Foundation Delivers Service at Annual Engineers Day (AED25)",
+    title: "Seris Foundation (YIF) Delivers Service at Annual Engineers Day (AED25)",
     coverImage: ev3_1,
     images: [ev3_1, ev3_2, ev3_3, ev3_4, ev3_5],
     description: [
-      "Seris Foundation had the unique opportunity to participate in Annual Engineers Day (AED) 2025 on September 25–26, carrying the mission to showcase the power of youth innovation and touch the lives of the community.",
+      "Seris Foundation (YIF) had the unique opportunity to participate in Annual Engineers Day (AED) 2025 on September 25–26, carrying the mission to showcase the power of youth innovation and touch the lives of the community.",
       "At this exhibition, we presented and sold our youth innovations – Smart Egg Incubator and Bamboo Briquettes – as part of technology and clean energy solutions addressing current challenges.",
       "Alongside this, we ran fundraising for newborns through Baby Pack sales, with all proceeds going to buy necessities for newborns. Last year we reached over 27 babies at Amana Hospital, and this year we will continue the journey of love by visiting newborns at Mnazi Mmoja Hospital at the end of November 2025.",
-      "Beyond this exhibition, Seris Foundation also participated in the Youth in Engineering Forum (YEF), where we were able to serve over 103 youth, and at the 22nd national engineers day conference AED 2025 Seris Foundation served over 350 engineers who visited our booth.",
+      "Beyond this exhibition, Seris Foundation (YIF) also participated in the Youth in Engineering Forum (YEF), where we were able to serve over 103 youth, and at the 22nd national engineers day conference AED 2025 Seris Foundation (YIF) served over 350 engineers who visited our booth.",
       "We believe every youth innovation and every contribution from stakeholders is an investment in our nation's future.",
       "We welcome stakeholders, partners, and friends to continue joining us to grow innovation, invest in youth dreams, and bring smiles to newborns.",
     ],
@@ -64,12 +64,12 @@ export const events = [
   {
     slug: "seris-foundation-receives-certificate-youth-in-engineering-forum-2025",
     date: "24 September 2025",
-    title: "Seris Foundation Receives Certificate – Youth in Engineering Forum 2025",
+    title: "Seris Foundation (YIF) Receives Certificate – Youth in Engineering Forum 2025",
     coverImage: ev4A4,
     images: [ev4A4, ev4A1, ev4A2, ev4A3],
     description: [
-      "On 24 September, Seris Foundation participated fully in the closing of Youth in Engineering Forum 2025, receiving a certificate for exhibiting innovative engineers and presenting at the Youth in Engineering Forum.",
-      "The certificate was presented by the guest of honour, the Permanent Secretary of the Ministry of Construction, Dr. Charles Msonde, and received by the CEO of Seris Foundation.",
+      "On 24 September, Seris Foundation (YIF) participated fully in the closing of Youth in Engineering Forum 2025, receiving a certificate for exhibiting innovative engineers and presenting at the Youth in Engineering Forum.",
+      "The certificate was presented by the guest of honour, the Permanent Secretary of the Ministry of Construction, Dr. Charles Msonde, and received by the CEO of Seris Foundation (YIF).",
       "We continue to partner with stakeholders to promote innovation and the contribution of youth in the engineering sector.",
       "The following day we joined the summit of Annual Engineers Day (AED2025) — to witness innovation, new perspectives and the future of engineering in the country.",
     ],
@@ -88,3 +88,6 @@ export const events = [
     ],
   },
 ];
+
+// Separate list for upcoming events (no overlap with "Our events" cards)
+export const upcomingEvents = [];
