@@ -30,6 +30,7 @@ export default function ImpactStatsSection() {
                 <img
                   src={src}
                   alt={`Partner ${(i % partnerImages.length) + 1}`}
+                  loading="lazy"
                   className="max-h-16 sm:max-h-20 md:max-h-28 lg:max-h-36 w-auto object-contain"
                 />
               </div>
